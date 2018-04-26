@@ -1,0 +1,142 @@
+page{
+    height:100%;
+}
+.couponListContainer{
+    width: 100%;
+    height: auto;
+
+}
+.couponContainer{
+    width: 700rpx;
+    height:200rpx;
+    background: url(http://zwhtubiaoku.oss-cn-beijing.aliyuncs.com/icon/couponBg.png)no-repeat center;
+    background-size: 100% 100%;
+    overflow: hidden;
+    margin:auto;
+    margin-top: 20rpx;
+    border-radius: 20rpx;
+    box-shadow:3px 3px 2px 0px #f3f3f3;
+
+}
+.couponContainer .money{
+    float: left;
+    width: 210rpx;
+    height:100%;
+    line-height: 200rpx;
+    font-size: 12px;
+    color:#FF9434;
+    text-align: center;
+  
+
+}
+.couponContainer .money .bigFontSize{
+    font-size: 15px;
+    font-weight: 600;
+    color:#FF9434
+}
+.couponContainer .time{
+    float: left;
+    width: 320rpx;
+    height: 200rpx;
+}
+.couponContainer  .time .leastMoney{
+    line-height:140rpx;
+    font-size: 13px;
+    font-weight:600;
+    color:#FF9434;
+    text-align: center;
+    height: 100rpx;
+}
+.couponContainer  .time .mostTime{
+    line-height: 1;
+    font-size: 10px;
+    color:#666;
+    text-align: center
+}
+.couponContainer  .use{
+    float: left;
+    width: 140rpx;
+    height: 200rpx;
+}
+.couponContainer  .use  .couponBtn{
+    width:90rpx;
+    height: 80rpx;
+    background: #FF9434;
+    color:#fff;
+    font-size: 13px;
+    padding:0;
+    margin:45rpx 0 0 20rpx;
+
+}
+.couponContainer  .use .hasCoupon{
+  width:90rpx;
+  height:90rpx;
+  margin:45rpx 0 0 20rpx;
+}
+.couponContainerGray{
+    width: 700rpx;
+    height:200rpx;
+    background: url(http://zwhtubiaoku.oss-cn-beijing.aliyuncs.com/icon/couponGrayBg.png)no-repeat center;
+    background-size: 100% 100%;
+    overflow: hidden;
+    margin:auto;
+    margin-top: 20rpx;
+    border-radius: 20rpx;
+    box-shadow:3px 3px 2px 0px #f3f3f3;
+    color:#9B9B9B ;
+}
+.couponContainerGray .money{
+    float: left;
+    width: 210rpx;
+    height:100%;
+    line-height: 200rpx;
+    font-size: 12px;
+    color:#9B9B9B;
+    text-align: center;
+  
+
+}
+.couponContainerGray .money .bigFontSize{
+    font-size: 15px;
+    font-weight: 600;
+    color:#9B9B9B
+}
+.couponContainerGray .time{
+    float: left;
+    width: 320rpx;
+    height: 200rpx;
+}
+.couponContainerGray  .time .leastMoney{
+    line-height:140rpx;
+    font-size: 13px;
+    font-weight:600;
+    color:#9B9B9B;
+    text-align: center;
+    height: 100rpx;
+}
+.couponContainerGray  .time .mostTime{
+    line-height: 1;
+    font-size: 10px;
+    color:#9B9B9B;
+    text-align: center
+}
+.couponContainerGray  .use{
+    float: left;
+    width: 140rpx;
+    height: 200rpx;
+}
+.couponContainerGray  .use  .couponBtn{
+    width:90rpx;
+    height: 80rpx;
+    background: #FF9434;
+    color:#fff;
+    font-size: 13px;
+    padding:0;
+    margin:45rpx 0 0 20rpx;
+
+}
+.couponContainerGray  .use .hasCoupon{
+  width:90rpx;
+  height:90rpx;
+  margin:45rpx 0 0 20rpx;
+}

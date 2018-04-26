@@ -1,0 +1,61 @@
+<view class='container'>
+  <view class='couponListContainer'>
+      
+             <view class='couponContainer'>
+                   <view class='money'>
+                       ￥<text class='bigFontSize'>5</text>
+                   </view >
+                   <view class='time'>
+                        <view class='leastMoney'>
+                            满100元可用
+                        </view>
+                        <view class='mostTime'>
+                            有效期至2018-10-20
+                        </view>
+                       
+                   </view>
+                   <view class='use'>
+                        <button  disabled="" bindtap="defaultTap" class='couponBtn'>使用</button>
+                   </view>
+             </view>
+            <view class='couponContainerGray'>
+                <view class='money'>
+                    ￥<text class='bigFontSize'>5</text>
+                </view >
+                <view class='time'>
+                    <view class='leastMoney'>
+                        满100元可用
+                    </view>
+                    <view class='mostTime'>
+                        有效期至2018-10-20
+                    </view>
+                    
+                </view>
+                <view class='use'>
+                    <button  disabled="" bindtap="defaultTap" class='couponBtn'  wx:if='{{has}}'>使用</button>
+                    <image src="http://zwhtubiaoku.oss-cn-beijing.aliyuncs.com/icon/couponused.png" class='hasCoupon' />
+                    <image src="http://zwhtubiaoku.oss-cn-beijing.aliyuncs.com/icon/couponfailure.png"  wx:if='{{failure}}'class='hasCoupon' />
+                </view>
+            </view>
+             <view class='couponContainerGray'>
+                <view class='money'>
+                    ￥<text class='bigFontSize'>5</text>
+                </view >
+                <view class='time'>
+                    <view class='leastMoney'>
+                        满100元可用
+                    </view>
+                    <view class='mostTime'>
+                        有效期至2018-10-20
+                    </view>
+                    
+                </view>
+                <view class='use'>
+                    <button  disabled="" bindtap="defaultTap" class='couponBtn'  wx:if='{{has}}'>使用</button>
+                    <image src="http://zwhtubiaoku.oss-cn-beijing.aliyuncs.com/icon/couponused.png" wx:if='{{used}}' class='hasCoupon' />
+                    <image src="http://zwhtubiaoku.oss-cn-beijing.aliyuncs.com/icon/couponfailure.png" class='hasCoupon' />
+                </view>
+            </view>
+       
+  </view>
+</view>

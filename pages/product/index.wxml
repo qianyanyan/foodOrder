@@ -1,0 +1,146 @@
+<!--pages/product/index.wxml-->
+<view class='container'>
+     <view class='shopContainer'>
+        <view class='shopContent'>
+                <view class='shopImgContainer'>
+                   <image src="{{shop.headImg}}" class='shopImg'/>
+                </view>
+                <view class='shopMsgContainer'>
+                    <view class='shopName'>
+                        {{shop.name}}
+                    </view>
+                    <view class='shopTime'>
+                        营业时间: {{shop.startTime}}-{{shop.endTime}}
+                    </view>
+                </view>
+        </view>  
+        <view class='shopTipContainer'  wx:if='{{shop.tip}}'>
+              <view class='shopTip'>
+                 <view class='tip'>提示</view>
+                 <view class='tipContent'>
+                     {{shop.tip}}
+                 </view>
+              </view>
+        </view>
+     </view>
+     <view class='productContainer'>
+        <view class='productNameContainer'>
+                <scroll-view scroll-y="true" style='height:{{scollHeight}}px;'>
+                   <view wx:for="{{productCategories}}" wx:key="{{index}}" data-id="{{item.key}}" class="productName {{ item.active==true ? 'productNameActive':''}}" bindtap="productNameActive">{{item.title}}</view>
+                </scroll-view>
+        </view>
+       
+             <view class='productContentContainer'>
+                <scroll-view scroll-y="true" style='height:{{scollHeight}}px;'  bindscroll='moreProduct'>
+                   <view   wx:if="{{shopProductList.length!=0}}"  wx:for="{{shopProductList}}" wx:key="{{index}}" data-id="{{item.key}}" class='product'>
+                         <view class='productMsg'>
+                               <view class='productImgContainer'>
+                                   <view class='productimg'>
+                                     <image src="{{item.productImage}} " class='productImg'/>    
+                                  </view>
+                                  <view class='productMsgContainer'>
+                                       <view class='productsName'>
+                                           {{item.productName}}
+                                       </view>
+                                       <view class='productsMonthlySales'>
+                                          月销 {{item.sales}}{{item.unit}}
+                                       </view>
+                                       <view style='overflow:hidden;'>
+                                          <view class='productsPrice'>
+                                              <text  style='font-size:12px;color:#FF9434;'>￥</text>{{item.price}}
+                                          </view>
+                                          <view class='stepper'>
+                                                <button disabled="{{item.buyNum==0?'disabled':''}}" bindtap="stepperLess" class='lessBtn'  data-id="{{item.productId}}">-</button>
+                                                 <view class='showNum'>
+                                                     {{item.buyNum}}
+                                                 </view>
+                                                <button   bindtap="stepperAdd" class='addBtn'  data-id="{{item.productId}}">+</button>
+                                          </view>
+                                       </view>
+                                       
+                                  </view>
+                               </view>
+                        </view>
+                   </view>
+                   <view  wx:if="{{productList.length==0}}" >
+                       暂未添加商品
+                   </view>
+                </scroll-view>
+            </view>
+          
+     </view>
+       <!---选择商品规格弹出框-->
+            <view class='mask'   wx:if='{{maskShow==true}}' bindtap="hideMask">
+                  
+            </view>
+            <view class='productSp'  wx:if='{{productSp}}'  >
+                  <view wx:for='{{productSp}}' wx:key='i'>
+                        <view class='spName' data-id='{{item.specification.id}}'>{{item.specification.name}}</view>
+                        <view class='spContentContainer'>
+                            <view wx:for='{{item.specificationValues}}' wx:for-item="items" wx:key='j' data-id='{{items.id}} ' bindtap="choiceSp" data-parentid='{{items.specification.id}}' data-productid='{{productSpId}}' class="sp  {{items.active==true?'spActive':''}}">{{items.name}}</view>
+                        </view>
+                  </view>
+                  <view class='addCartContent'>
+                       <view class='productSpPrice'>
+                           <view class='productSpPriceContent'>
+                                <view class='choiceProductSpPrice'>
+                                    ￥{{spPrice}} 
+                                </view>
+                               <view class='choiceProductSpName'>
+                                  (  {{spName}}  )
+                               </view>
+                           </view>
+                       </view>
+                       <view class='addCartBtnContainer'>
+                           <button class='addCartBtn' bindtap="addCart"  data-id="{{spProductId}}">加入购物车</button>
+                       </view>
+                  </view>
+            </view>
+            <view class='cartItemContainer'  wx:if='{{cartItemShow==true}}'>
+                <view class='deletCart' bindtap='clearCart'> 
+                  <image src="http://zwhtubiaoku.oss-cn-beijing.aliyuncs.com/icon/delet.png" class='delectIcon'  />
+                 
+                      清空购物车
+                 
+                </view>
+                <scroll-view scroll-y="true" style='height:150px'>
+                    <view class='cartItem'  wx:for="{{cartList}}"  wx:key="index"  wx:if='{{cartList.length!=0}}'>
+                        <view class='cartItemProductNameContainer'>
+                           <view class='cartItemproductName'> {{item.cartItem.productItem.product.name}}</view> <view class='cartProductSp' >
+                            <view wx:if='{{item.cartItem.productItem.standard}}'>
+                               {{item.cartItem.productItem.standard}}
+                           </view>
+                           </view>
+                        </view>
+                        <view class='cartItemProductPrice'>
+                            ￥{{item.cartItem.productItem.levelPrice}}
+                        </view>
+                        <view class='cartItemStepper'>
+                               <view class='stepper' style='margin:5rpx 0 0 40rpx;'>
+                                                <button disabled="{{item.buyNum==0?'disabled':''}}" bindtap="cartStepperLess" class='lessBtn'  data-id="{{item.cartItem.productItem.id}}" data-productid='{{item.cartItem.productItem.product.id}}'>-</button>
+                                                 <view class='showNum'>
+                                                     {{item.cartItem.quantity}}
+                                                 </view>
+                                                <button   bindtap="cartStepperAdd" class='addBtn'  data-id="{{item.cartItem.productItem.id}}" data-productid='{{item.cartItem.productItem.product.id}}'>+</button>
+                                </view>
+                        </view>
+                    </view>
+                    <view style='font-size:12px;color:#999;text-align:center;padding:20rpx 0;' wx:if='{{cartList.length==0}}'>
+                        你还没有添加商品!
+                    </view>
+                </scroll-view>
+            </view>
+            <view class='cartContainer'>
+                 <view class='cartContent'>
+                     <view class='cartImgContainer'>
+                          <image src="http://zwhtubiaoku.oss-cn-beijing.aliyuncs.com/icon/cart.png" class='cartImg' bindtap="showCartItm"/>
+                     </view>
+                     <view class='cartPrice'  wx:if='{{allPrice}}'>
+                         ￥{{allPrice}}
+                     </view>
+                 </view>
+                 <view>
+                     <button  disabled="{{cartList.length==0?true:false}}" bindtap="goCartDetail" class='buyBtn' >选好了</button>
+                 </view>
+            </view>
+</view>

@@ -1,0 +1,133 @@
+
+<view class='container'>
+    <view class='chooiseContainer'  wx:if='{{method!="ON_THE_SPOT"}}'> 
+         <view class='row'  wx:if='{{!receiver}}'  bindtap="goAddressList">
+            <view class='newAddress' >
+                  选择收货地址
+            </view>
+            
+         </view>
+          <view class='addressBg' wx:if='{{receiver}}' bindtap="goAddressList">
+                      <view class='addressContainer' >
+                            <view class='address'>
+                                    <view class='addressMessage'>
+                                        <view class='addressName'>
+                                            {{receiver.consignee}}
+                                        </view>
+                                        <view class='addressPhone'>
+                                            {{receiver.phone}}
+                                        </view>
+                                    </view>
+                                    <view class='addressarea'>
+                                       {{receiver.area}}{{receiver.address}}
+                                    </view>
+                            </view>
+                           
+            </view>
+                   
+      </view>
+     
+    </view>
+    <view class='chooiseContainer' wx:if='{{method!="ON_THE_SPOT"}}'>
+             <view class='row'>
+                    <view class='Column-4 sendTime'>预定时间</view>
+                    <view class='Column-8' style='display:flex'>
+                        <picker bindchange='datePickerChange'  value="{{date}}"  mode='date' start="2015-09-01" end="2017-09-01" class='picker'>
+                            <view class='text'>{{date}}</view>
+                        </picker>
+                        <picker bindchange='timePickerChange'  value="{{dateTime}}"  mode='time'  start="09:01" end="21:01" class='picker'>
+                            <view class='text'>{{dateTime}}</view>
+                        </picker>
+                    </view>
+            </view>
+    </view>
+      <view class='chooiseContainer'>
+         <view class='row-noarrow' wx:for='{{cartList}}' wx:key='{{index}}'>
+            <view class='Column-2'>
+                 <image src="{{item.productImage}}" class='cartProductImg'/>
+            </view>
+            <view class='cartProductNameContainer Column-7'>
+                        <view class='cartProductName'>
+                          {{item.cartItem.productItem.product.name}}
+                        </view>
+                        <view class='cartProductNum' wx:if='{{item.cartItem.productItem.standard}}'>
+                           {{item.cartItem.productItem.standard}}
+                        </view>
+            </view>
+            <view  class='Column-3 textRight font12'>
+                <view class='cartProductName'>
+                    ￥ {{item.cartItem.productItem.price}}
+                </view>
+                <view class='cartProductNum'>
+                     X {{item.cartItem.quantity}}
+                </view>
+            </view>
+         </view>
+         <view class='row-noarrow'>
+            <view class='Column-3'>
+                餐盒费
+            </view>
+            <view  class='Column-9 textRight font12'>
+                ￥0
+                
+            </view>
+         </view>
+         <view class='row-noarrow'>
+            <view class='Column-3'>
+                配送费
+            </view>
+            <view  class='Column-9 textRight font12'>
+                ￥0
+            </view>
+         </view>
+         <view class='row-noarrow'>
+            <view class='Column-3'>
+                实付
+            </view>
+            <view  class='Column-9 textRight font12'>
+                ￥{{allPrice}}
+            </view>
+         </view>
+      
+    </view>
+    <view class='chooiseContainer'>
+         <view class='row'>
+            <view class='Column-3'>
+                优惠券
+            </view>
+            <view  class='Column-9 textRight textArrow colorYellow font12'>
+                抵扣0.01
+            </view>
+         </view>
+         <view class='row'>
+            <view class='Column-4'>
+                就餐人数
+            </view>
+            <view  class='Column-8'>
+                   <picker range="{{people}}" bindchange='peoplePickerChange'  value="{{peopleindex}}"  class='picker'>
+                      <view class='text'>{{people[peopleindex]}}人</view>
+                   </picker>
+                
+            </view>
+         </view>
+         <view class='row-noarrow'>
+            <view class='Column-3'>
+                口味
+            </view>
+            <view  class='Column-9'>
+               <input placeholder="请填写您喜好的口味(选填)" class='enterText' type='text'  bindinput='test'/>
+            </view>
+         </view>
+        <view class='row-noarrow'>
+            <view class='Column-3'>
+                备注/发票
+            </view>
+            <view  class='Column-9'>
+                <input placeholder="请填写备注(选填)" class='enterText' type='number' bindinput='note'/>
+            </view>
+        </view>
+       
+    </view>
+    
+    <button  class='submitbutton' bindtap="subimt">提交订单</button>
+</view>

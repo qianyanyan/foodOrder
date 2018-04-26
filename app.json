@@ -1,0 +1,56 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/order/index",
+    "pages/mine/index",
+    
+    "pages/shop/index",
+    "pages/shop-template/index",
+    "pages/reservation/index",
+    "pages/product/index",
+    "pages/cartDetail/index",
+    "pages/newAddress/index",
+    "pages/addressList/index",
+    "pages/orderFinish/index",
+    "pages/mineReservation/index",
+    "pages/mineCoupon/index",
+    "pages/mineVip/index",
+    "pages/vipMessage/index",
+    "pages/coupon/index",
+    "pages/shopList/index",
+    "pages/getVip/index",
+    "pages/blindPhone/index",
+    "pages/recharge/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#D03735",
+    "navigationBarTitleText": "点餐",
+    "navigationBarTextStyle": "white"
+    
+  },
+  "tabBar": {
+    "color": "#bfbfbf",
+    "selectedColor": "#D03634",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "assets/img/home.png",
+        "selectedIconPath": "assets/img/home-active.png"
+      },
+      {
+        "pagePath": "pages/order/index",
+        "text": "订单",
+        "iconPath": "assets/img/order.png",
+        "selectedIconPath": "assets/img/order-active.png"
+      },
+      {
+        "pagePath": "pages/mine/index",
+        "text": "我的",
+        "iconPath": "assets/img/mine.png",
+        "selectedIconPath": "assets/img/mine-active.png"
+      }
+    ]
+  }
+}

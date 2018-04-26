@@ -1,0 +1,46 @@
+<!--pages/reservation/index.wxml-->
+<view class='container'>
+    
+    <view class='chooiseContainer'>
+         <view class='row-noarrow'>
+            <view class='Column-3'>
+                姓名
+            </view>
+            <view  class='Column-9'>
+               <input placeholder="例如张三" class='enterText' bindinput='nameInput'/>
+            </view>
+         </view>
+         
+         <view class='row-noarrow'>
+            <view class='Column-3'>
+                性别
+            </view>
+            <view  class='Column-9'>
+                  <view class='choice' wx:for='{{sex}}' wx:key='{{index}}'>
+                      <image src="{{item.img}}" class='choiceImg' style='height:40rpx;'  bindtap="choiceSex" data-sex='{{item.sex}}'/><view class='choiceSex'>{{item.name}}</view>
+                  </view>
+                
+            </view>
+         </view>
+         <view class='row-noarrow'>
+            <view class='Column-3'>生日</view>
+            <view class='Column-9' style='display:flex'>
+               <picker bindchange='datePickerChange'  value="{{date}}"  mode='date'  class='picker'>
+                  <view class='text'>{{date}}</view>
+               </picker>
+               
+            </view>
+         </view>
+         <view class='row-noarrow'>
+            <view class='Column-3'>
+                电话号码
+            </view>
+            <view  class='Column-9'>
+               <input placeholder="例如：13112341231" class='enterText' type='number' bindinput='mobileInput'/>
+            </view>
+         </view>
+         
+    </view>
+   
+    <button  class='submitbutton' bindtap="getVip">获取会员卡</button>
+</view>

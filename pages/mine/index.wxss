@@ -1,0 +1,90 @@
+/* pages/mine/index.wxss */
+.chooiseContainer{
+    width: 100%;
+    height:auto;
+    margin: 0 0 20rpx 0;
+    background: #fff;
+}
+.row{
+    width:95%;
+    margin:auto;
+    border-bottom: 1px solid #eee;
+    background: url('http://zwhtubiaoku.oss-cn-beijing.aliyuncs.com/icon/arrow-right.png')no-repeat right;
+    background-size:40rpx 40rpx;
+    display: flex;
+    padding:20rpx 0 20rpx 0 ;
+}
+.Column-2{
+    flex:2;
+    font-size:13px;
+   
+}
+.Column-10{
+    flex:10;
+    font-size:13px;
+   
+}
+.Column-8{
+    flex:8;
+    font-size:13px;
+   
+}
+.Column-4{
+    flex:4;
+    font-size:13px;
+   
+}
+.Column-1{
+    flex:1;
+    font-size:13px;
+   
+}
+.order{
+    padding-left: 50rpx;
+    line-height: 50rpx;
+    background: url(http://zwhtubiaoku.oss-cn-beijing.aliyuncs.com/icon/order.png)no-repeat left;
+    background-size: 50rpx 50rpx; 
+}
+.coupon{
+    padding-left: 50rpx;
+    line-height: 50rpx;
+    background: url(http://zwhtubiaoku.oss-cn-beijing.aliyuncs.com/icon/couponmine.png)no-repeat left;
+    background-size: 50rpx 50rpx; 
+}
+.address{
+    padding-left: 50rpx;
+    line-height: 50rpx;
+    background: url(http://zwhtubiaoku.oss-cn-beijing.aliyuncs.com/icon/address.png)no-repeat left;
+    background-size: 50rpx 50rpx; 
+}
+.time{
+    padding-left: 50rpx;
+    line-height: 50rpx;
+    background: url(http://zwhtubiaoku.oss-cn-beijing.aliyuncs.com/icon/time.png)no-repeat left;
+    background-size: 50rpx 50rpx; 
+}
+.vip{
+    padding-left: 50rpx;
+    line-height: 50rpx;
+    background: url(http://zwhtubiaoku.oss-cn-beijing.aliyuncs.com/icon/vip.png)no-repeat left;
+    background-size: 50rpx 50rpx; 
+}
+.row-noarrow{
+    width:95%;
+    margin:auto;
+    border-bottom: 1px solid #eee;
+   
+    display: flex;
+    padding:20rpx 0 20rpx 0 ;
+}
+.mineAvatar{
+    width:110rpx;
+    height:110rpx;
+    margin:auto;
+    border-radius: 100%;
+}
+.mineName{
+   line-height: 110rpx;
+   font-size: 14px;
+   font-weight: 600;
+}

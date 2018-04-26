@@ -1,0 +1,77 @@
+<!--pages/order/index.wxml-->
+<view class='container'>
+    
+    
+        <view class='orderHeader'>
+            <view class='reservationOrder  {{activeTabbarId==0?"active":""}}' data-id='0'  bindtap="switchTab" data-method='ON_THE_SPOT'>
+                堂食订单
+            </view>
+            <view class='takeWayOrder {{activeTabbarId==1?"active":""}}' data-id='1' bindtap="switchTab" data-method='TAKE_OUT'>
+                外卖订单
+            </view>
+        </view>
+        <view class='nooderContainer'  wx:if='{{orderList.length==0}}'>
+            <view class='nooderImgContainer'>
+                <image src="http://zwhtubiaoku.oss-cn-beijing.aliyuncs.com/icon/noorder.png" class='nooderImg' />
+            </view>
+            <view class='nooderTip'>
+                暂无订单
+            </view>
+        </view>
+        <view class='orderContainer'  wx:if='{{orderList.length!=0}}'>
+     
+        <view class='orderProductListContainer'  wx:for='{{orderList}}' wx:key='{{index}}'>
+           <view class='orderTime'  >
+               <view style='flex:9'>
+                   点餐时间:{{item.order.createDate}}
+               </view>
+               <view style='flex:3;text-align:Center'>
+                   <text  wx:if='{{item.order.status=="COMPLETED"}}' style="display: block;text-align: right;color:#d81e06;">已完成</text>
+                   <text  wx:if='{{item.order.status=="CANCELLED"}}' style="display: block;text-align: right;color: #999;">已取消</text>
+                   <text  wx:if='{{item.order.status=="PENDING_PAYMENT"}}' style="display: block;text-align: right;color: #FF9434;">未支付</text>
+               </view>
+           </view>
+           <view class='orderProductList' >
+               <view class='orderProduct'  wx:for='{{item.orderItems}}' wx:for-item='items' wx:key='{{i}}'  >
+                   <view class='ImgContainer'>
+                        <image src="{{items.productImage}}" class='img' />
+                   </view>
+                   <view class='nameContainer'>
+                      <view style='float:left;width:70%;'>
+                        <view class='productName'>
+                            {{items.orderItem.productItem.product.name}}
+                        </view>
+                        <view style='font-size:12px;color:#999'  wx:if='{{items.orderItem.productItem.standard}}'>
+                                {{items.orderItem.productItem.standard}}
+                        </view>
+                        </view>
+                        <view class='priceContainer' style='float:left;width:30%;'>
+                            <view class='pirce'>
+                                ￥{{items.orderItem.price}}
+                            </view>
+                            <view class='num'>
+                                X {{items.orderItem.quantity}}
+                            </view>
+                        </view>
+                        </view>
+                 </view>
+                 <view class='topC' catchtap='goFinishOrder'  data-id='{{item.order.id}}'>
+                     <!---不要删除这个元素,这个元素用来遮盖当前的商品列表，用来进入到当前的订单详细-->
+                 </view>
+           </view>
+           <view class='orderAllPrice'>
+               共计{{item.orderItems.length}}件商品,实付款￥{{item.order.amount}}
+           </view>
+            <view class='orderBtnGroup'>
+                 <view class='orderBtn'>
+                    <button   bindtap="cancelOrder" class='cancleBtn' wx:if='{{item.order.status=="PENDING_PAYMENT"}}' data-id='{{item.order.id}}'>取消订单</button>
+                 </view>
+                  <view class='orderBtn'>
+                    <button   bindtap="defaultTap" class='payBtn' wx:if='{{item.order.status=="PENDING_PAYMENT"}}' data-id='{{item.order.id}}'>立即支付</button> 
+                    <button   bindtap="deletOrder" class='cancleBtn' wx:if='{{item.order.status=="CANCELLED"}}' data-id='{{item.order.id}}'>删除订单</button> 
+                 </view>
+            </view>
+        </view>
+      
+        </view>
+</view>

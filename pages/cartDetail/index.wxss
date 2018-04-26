@@ -1,0 +1,192 @@
+/* pages/reservation/index.wxss */
+.chooiseContainer{
+    width: 100%;
+    height:auto;
+    margin: 0 0 20rpx 0;
+    background: #fff;
+}
+.row{
+    width:95%;
+    margin:auto;
+    border-bottom: 1px solid #eee;
+    background: url('http://zwhtubiaoku.oss-cn-beijing.aliyuncs.com/icon/arrow-right.png')no-repeat right;
+    background-size:40rpx 40rpx;
+    display: flex;
+    padding:20rpx 0 20rpx 0 ;
+}
+.Column-3{
+    flex:3;
+    font-size:13px;
+    font-weight: 600;
+}
+
+.Column-4{
+    flex:4;
+    font-size:13px;
+    font-weight: 600;
+}
+.Column-8{
+    flex:8;
+    font-size:13px;
+    font-weight: 600;
+}
+.Column-9{
+    flex:9;
+}
+.detailAddressIcon{
+    width:50rpx;
+    height:50rpx;
+}
+.newAddress{
+    padding-left: 50rpx;
+    line-height: 50rpx;
+    background: url(http://zwhtubiaoku.oss-cn-beijing.aliyuncs.com/icon/address.png)no-repeat left;
+    background-size: 50rpx 50rpx; 
+}
+.height80r{
+   height: 80rpx
+}
+.Column-8 .picker {
+    height:100%;
+}
+.Column-8 .picker .text{
+    text-align: right;
+    height:auto;
+    color:#FF9434;
+    padding-right:40rpx;
+    font-size: 12px;
+    overflow: hidden
+}
+.row-noarrow{
+    width:95%;
+    margin:auto;
+    border-bottom: 1px solid #eee;
+   
+    display: flex;
+    padding:20rpx 0 20rpx 0 ;
+}
+.Column-9 .enterText{
+    font-size: 12px;
+}
+.enterArea{
+    width: 100%;
+    height:auto;
+}
+.choice{
+    float: left;
+    overflow: hidden;
+    padding-right: 20rpx;
+}
+.choice .choiceImg{
+    width:40rpx;
+    height:40prx;
+    float: left;
+}
+.choice .choiceSex{
+    float: left;
+    padding-left: 20rpx;
+    font-size:12px;
+    color:#999;
+    line-height:40rpx;
+
+}
+.Column-5{
+    flex: 5;
+}
+.Column-7{
+    flex: 7;
+}
+.Column-3{
+    flex: 3;
+}
+.Column-2{
+    flex: 2;
+}
+.cartProductImg{
+    width:160rpx;
+    height:140rpx;
+   
+}
+.colorYellow{
+    color:#FF9434
+}
+.font12{
+    font-size: 12px;
+}
+.textArrow{
+    padding-right: 40rpx;
+}
+.cartProductNameContainer{
+  
+}
+.cartProductName{
+    line-height: 1;
+    font-size: 14px;
+    height: 80rpx;
+
+}
+.cartProductNum{
+    line-height: 70rpx;
+    font-size: 12px;
+    color:#999;
+    
+}
+.textRight{
+    text-align: right
+}
+.submitbutton{
+    
+   
+    width: 95%;
+    margin: auto;
+    color:#fff;
+    
+    background: #FF9434;
+  
+    font-size: 13px;
+}
+.addressBg{
+    width: 100%;
+    background: #fff;
+    margin-bottom: 20rpx;
+    padding:20rpx 0;
+
+}
+ .addressBg .addressContainer{
+    width:95%;
+    margin: auto;
+    display: flex;
+    background: #fff;
+ 
+}
+ .addressBg .addressContainer .address{
+    flex: 10
+}
+ .addressBg .addressContainer .edit{
+    flex: 2;
+    text-align: center
+}
+ .addressBg .addressContainer .edit .editIcon{
+    width:60rpx;
+    height: 60rpx;
+    margin-top:10rpx;
+
+}
+ .addressBg .addressContainer .address .addressMessage{
+    overflow: hidden;
+    display: flex
+}
+ .addressBg .addressContainer .address .addressMessage .addressName{
+    font-size: 14px;
+    font-weight: 600;
+    flex: 3
+}
+ .addressBg .addressContainer .address .addressMessage .addressPhone{
+    font-size: 14px;
+    
+    flex: 9
+}
+ .addressBg .addressContainer .address  .addressarea{
+    font-size: 13px;
+    color:#666;
+}

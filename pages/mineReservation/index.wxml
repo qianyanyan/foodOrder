@@ -1,0 +1,40 @@
+<!--pages/mineReservation/index.wxml-->
+<view class='container'>
+    <view class='reservationList'>
+         <view wx:if='{{reservationList.length==0}}' style='text-align:center;color:#999;font-size:13px;'>
+             暂无预约
+         </view>
+         <view class='reservation' wx:for='{{reservationList}}' wx:key='{{index}}' wx:if='{{reservationList.length!=0}}'>
+               <view class='row'>
+                    <view class='col-4 RowLeftpadding leftText'>
+                        订餐人
+                    </view>
+                    <view class='col-8 textRight colorYellow rightText RowRightpadding'>
+                       {{item.name}}
+                    </view>
+               </view>
+               <view class='row'>
+                    <view class='col-4 RowLeftpadding leftText'>
+                        用餐人数
+                    </view>
+                    <view class='col-8 textRight colorYellow rightText RowRightpadding'>
+                       {{item.peopleNum}}人
+                    </view>
+               </view>
+               <view class='row'>
+                    <view  class='col-4  RowLeftpadding leftText'>
+                        时间
+                    </view>
+                    <view class='col-8 textRight colorYellow rightText RowRightpadding'>
+                        {{item.appointmentDate}}
+                    </view>
+               </view>
+               <view class='reservationStateTrue' wx:if='{{item.appointmentState=="REPAST"}}'>
+                   已就餐
+               </view>
+                <view class='reservationStateFalse' wx:if='{{item.appointmentState=="NOT_REPAST"}}'>
+                   未就餐
+               </view>
+         </view>
+    </view>
+</view>

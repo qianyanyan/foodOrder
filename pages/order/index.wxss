@@ -1,0 +1,166 @@
+/* pages/order/index.wxss */
+page{
+    height:100%;
+}
+.orderContainer{
+    background:#eee;
+    width: 100%; 
+    padding-top:70rpx;
+
+}
+.orderHeader{
+    display: flex;
+    width: 100%;
+    height: auto;
+    background:#fff;
+    position:fixed;
+    z-index:99;
+
+}
+.orderHeader .reservationOrder{
+    flex: 1;
+    line-height: 70rpx;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center
+}
+.orderHeader .takeWayOrder{
+    flex: 1;
+    line-height: 70rpx;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center
+}
+.active{
+   border-bottom: 1px solid #FF9434;
+}
+.nooderContainer{
+    width:100%;
+  
+    height: auto;
+    padding:80rpx 0;
+    margin-top: 70rpx;
+}
+.nooderContainer .nooderImgContainer{
+    width:50%;
+    margin: auto;
+    text-align: center
+}
+.nooderContainer .nooderImgContainer .nooderImg{
+    width:160rpx;
+    height:140rpx;
+}
+.nooderContainer .nooderTip{
+    text-align: center;
+    color:#666666;
+}
+.orderProductListContainer{
+    width:100%;
+    height: auto;
+    background: #fff;
+  
+    margin-top: 20rpx;
+}
+.orderProductListContainer .orderTime{
+   width:720rpx;
+   margin: auto;
+   color:#666;
+   font-size: 13px;
+   line-height: 80rpx;
+   border-bottom: 1px solid #eee;
+   display: flex
+}
+.orderProductListContainer  .orderProductList{
+    width:720rpx;
+    margin: auto;
+    position: relative;
+}
+.orderProductListContainer  .orderProductList .topC{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 99;
+ 
+    top:0;
+
+}
+.orderProductListContainer  .orderProductList .orderProduct{
+    width:100%;
+    overflow: hidden;
+    border-bottom: 1px solid #eee;
+    padding:15rpx 0; 
+} 
+.orderProductListContainer  .orderProductList .orderProduct .ImgContainer{
+    width:160rpx;
+    height:140rpx;
+    float: left
+}
+.orderProductListContainer  .orderProductList .orderProduct .ImgContainer .img{
+    width:160rpx;
+    height:140rpx;
+}
+.orderProductListContainer  .orderProductList .orderProduct .nameContainer{
+    width:550rpx;
+    height: auto;
+    float: left;
+    margin: 0 0 0 10rpx;
+}
+.orderProductListContainer  .orderProductList .orderProduct .nameContainer .productName{
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    height:80rpx;
+}
+.orderProductListContainer  .orderProductList .orderProduct .nameContainer  .priceContainer{
+    overflow: hidden;
+}
+.orderProductListContainer  .orderProductList .orderProduct .nameContainer  .priceContainer .pirce{
+    text-align: right;
+    font-size: 12px;
+    width:100%;
+    line-height: 80rpx;
+}
+.orderProductListContainer  .orderProductList .orderProduct .nameContainer  .priceContainer .num{
+    
+    font-size: 12px;
+    width:100%;
+    color:#666;
+    line-height: 60rpx;
+    text-align: right;
+}
+.orderAllPrice{
+    line-height: 80rpx;
+    text-align: right;
+    width: 720rpx;
+    margin:auto;
+    font-size: 13px;
+    color:#666;
+    border-bottom:1px solid #eee; 
+}
+.orderBtnGroup{
+    width:100%;
+    height:auto;
+    display: flex
+}
+.orderBtnGroup .orderBtn{
+    flex: 1;
+    padding:15rpx 0;
+
+}
+.orderBtnGroup .orderBtn .cancleBtn{
+    background: #fff;
+    border: none;
+    line-height: 70rpx;
+    width: 90%;
+    font-size:12px;
+
+}
+.orderBtnGroup .orderBtn .payBtn{
+    background: #FF9434;
+    border: none;
+    line-height: 70rpx;
+    color:#fff;
+    width: 90%;
+    font-size:12px;
+
+}

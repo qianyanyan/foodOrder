@@ -1,0 +1,28 @@
+<!--pages/reservation/index.wxml-->
+<view class='container'>
+    
+    <view class='chooiseContainer'>
+         
+         <view class='row-noarrow'>
+            <view class='Column-3'>
+                电话号码
+            </view>
+            <view  class='Column-9'>
+               <input placeholder="请输入你的手机号" class='enterText' type='number' bindinput='mobileInput'/>
+            </view>
+         </view>
+          <view class='row-noarrow'>
+            <view class='Column-3'>
+                验证码
+            </view>
+            <view  class='Column-9' style='position:relative;'>
+               <input placeholder="请输入验证码" class='enterText' type='number' bindinput='smsCodeInput'/>
+                <view  class='smsCode' bindtap='getSmsCode'>
+                    {{msg}}
+                </view>
+            </view>
+         </view>
+    </view>
+   
+    <button  class='submitbutton' bindtap="blindMobile">保存</button>
+</view>

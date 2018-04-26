@@ -1,0 +1,71 @@
+/* pages/mineReservation/index.wxss */
+page{
+    height: 100%;
+}
+.reservationList{
+    width:98%;
+ 
+}
+.reservation{
+    width: 100%;
+    margin: 20rpx 0 0 0;
+    background:#fff;
+
+}
+.reservation .row{
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding:20rpx 0;
+    border-bottom: 1px solid #eee;
+}
+.col-5{
+    flex: 5;
+}
+.textLeft{
+    text-align: left;
+}
+.textCenter{
+    text-align: center
+}
+.textRight{
+    text-align: right;
+}
+.RowLeftpadding{
+  padding-left: 20rpx;
+}
+.RowRightpadding{
+    padding-right: 20rpx;
+}
+.col-4{
+    flex: 4;
+}
+.col-8{
+    flex: 8;
+}
+.colorYellow{
+    color:#FF9434
+}
+.leftText{
+    font-size: 13px;
+    font-weight: 600;
+}
+.rightText{
+    font-size: 12px;
+}
+.reservationStateFalse{
+    height:80rpx;
+    line-height: 80rpx;
+    background: #FF9434;
+    color:#fff;
+    text-align: center;
+    font-size: 13px;
+}
+.reservationStateTrue{
+    height:80rpx;
+    line-height: 80rpx;
+    background: #c7c5c5;
+    color:#999;
+    text-align: center;
+    font-size: 13px;
+}

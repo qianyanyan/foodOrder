@@ -1,0 +1,38 @@
+<!--pages/addressList/index.wxml-->
+<view class='container'>
+      <view class='addressList'>
+           <view class='addressBg' wx:for='{{receivers}}' wx:key='{{index}}' wx:if='{{receivers.length!=0}}'>
+                      <view class='addressContainer' >
+                            <view class='address'>
+                                    <view class='addressMessage'>
+                                        <view class='addressName'>
+                                            {{item.consignee}}
+                                        </view>
+                                        <view class='addressPhone'>
+                                            {{item.phone}}
+                                        </view>
+                                    </view>
+                                    <view class='addressarea'>
+                                       {{item.area}}{{item.address}}
+                                    </view>
+                            </view>
+                            <view class='edit' bindtap="goChange"  data-id='{{item.id}}'  wx:if='{{from!="order"}}' >
+                                <image src="http://zwhtubiaoku.oss-cn-beijing.aliyuncs.com/icon/edit.png" class='editIcon'   data-id='{{item.id}}'  />
+                            </view>
+                             <view class='edit' wx:if='{{from =="order"}}'>
+                                <button  bindtap="useAddress"  data-id='{{item.id}}'  class='addressBtn'>使用</button>
+                            </view>
+                    </view>
+                   
+           </view>
+            <view wx:if='{{receivers.length==0}}' style='text-align:center;color:#999;font-size:12px;padding:20rpx 0'>
+                        你还没有添加地址
+             </view>
+      </view>
+      <view class='addBtnConatiner' bindtap="goAdd">
+         <view class='addBtn'>
+              <image src="../../assets/img/add.png" class='img' />
+               <text class='text'>新增地址</text>
+         </view>
+      </view>
+</view>

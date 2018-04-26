@@ -1,0 +1,37 @@
+<!--pages/mineVip/index.wxml-->
+<view class='container'>
+    <view class='VipContainer'> 
+          <view class='VipPeople'>
+              <view class='imgContainer'>
+                  <image src="https://wx.qlogo.cn/mmopen/vi_32/xibnHlkV4SZsrQFtvProuiaIgs9f6pplzaW2kkXKDUDHOeBXxsFhpHuY7P2dr2ibB0T0mzIMek6tS5VQM5y3ia7NLA/0"  class='img'/>
+              </view>
+              <view class='peopleNameContainer'>
+                   <view class='peopleName'>
+                       {{mineVipInfo.memberName}}
+                   </view>
+                   <view class='peopleVipId'>
+                     {{mineVipInfo.cardNum}}
+                   </view>
+              </view>
+              <view class='Vip'  bindtap="goVipMsg" data-id='{{mineVipInfo.id}}'>
+                  会员档案
+              </view>
+          </view>
+          <view class='moneyContainer'>
+              <view class='Balance '>
+                  余额
+              </view>
+              <view class='money'>
+                  <view class='col-4 height30 colorGreen font14'>
+                      ￥{{mineVipInfo.money}}
+                  </view>
+                  <view class='col-4 height30'>
+                      <button class='btn popularBtn' bindtap="goRecharge" data-id='{{mineVipInfo.id}}'>充值</button>
+                  </view>
+                  <view class='col-4 height30'>
+                      <button class='btn'>明细</button>
+                  </view>
+              </view>
+          </view>
+    </view>
+</view>

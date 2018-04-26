@@ -1,0 +1,125 @@
+
+<view class='container'>
+    <view class='chooiseContainer'  wx:if='{{order.order.type!="ON_THE_SPOT"}}'> 
+         <view class='row'  wx:if='{{!order.order.address}}'  bindtap="goAddressList">
+            <view class='newAddress' >
+                  选择收货地址
+            </view>
+            
+         </view>
+          <view class='addressBg' wx:if='{{order.order.address}}' bindtap="goAddressList">
+                      <view class='addressContainer' >
+                            <view class='address'>
+                                    <view class='addressMessage'>
+                                        <view class='addressName'>
+                                            {{order.order.consignee}}
+                                        </view>
+                                        <view class='addressPhone'>
+                                            {{order.order.consigneePhone}}
+                                        </view>
+                                    </view>
+                                    <view class='addressarea'>
+                                       {{order.order.area}}{{order.order.address}}
+                                    </view>
+                            </view>
+                           
+            </view>
+                   
+      </view>
+     
+    </view>
+    <view class='chooiseContainer' wx:if='{{order.order.type!="ON_THE_SPOT"}}'>
+             <view class='row-noarrow'>
+                    <view class='Column-4 sendTime'>预定时间</view>
+                    <view class='Column-8' style='display:flex'>
+                        {{order.order.deliveryDate}}
+                    </view>
+            </view>
+    </view>
+      <view class='chooiseContainer'>
+         <view class='row-noarrow' wx:for='{{order.orderItems}}' wx:key='{{index}}'>
+            <view class='Column-2'>
+                 <image src="{{item.productImage}}" class='cartProductImg'/>
+            </view>
+            <view class='cartProductNameContainer Column-7'>
+                        <view class='cartProductName'>
+                          {{item.orderItem.productItem.product.name}}
+                        </view>
+                        <view class='cartProductNum' wx:if='{{item.orderItem.productItem.standard}}'>
+                           {{item.orderItem.productItem.standard}}
+                        </view>
+            </view>
+            <view  class='Column-3 textRight font12'>
+                <view class='cartProductName'>
+                    ￥ {{item.orderItem.productItem.price}}
+                </view>
+                <view class='cartProductNum'>
+                     X {{item.orderItem.quantity}}
+                </view>
+            </view>
+         </view>
+         <view class='row-noarrow'>
+            <view class='Column-3'>
+                餐盒费
+            </view>
+            <view  class='Column-9 textRight font12'>
+                ￥0
+                
+            </view>
+         </view>
+         <view class='row-noarrow'>
+            <view class='Column-3'>
+                配送费
+            </view>
+            <view  class='Column-9 textRight font12'>
+                ￥0
+            </view>
+         </view>
+         <view class='row-noarrow'>
+            <view class='Column-3'>
+                实付
+            </view>
+            <view  class='Column-9 textRight font12'>
+                ￥{{order.order.amount}}
+            </view>
+         </view>
+      
+    </view>
+    <view class='chooiseContainer'>
+         <view class='row'>
+            <view class='Column-3'>
+                优惠券
+            </view>
+            <view  class='Column-9 textRight textArrow colorYellow font12'>
+                抵扣0.01
+            </view>
+         </view>
+         <view class='row-noarrow'>
+            <view class='Column-4'>
+                就餐人数
+            </view>
+            <view  class='Column-8'>
+                     {{order.order.diners}}
+            </view>
+         </view>
+         <view class='row-noarrow'>
+            <view class='Column-3'>
+                口味
+            </view>
+            <view  class='Column-9'>
+               <input placeholder="请填写您喜好的口味(选填)" class='enterText' type='text'  bindinput='test' value='{{order.order.taste?order.order.taste:""}}'/>
+            </view>
+         </view>
+        <view class='row-noarrow'>
+            <view class='Column-3'>
+                备注/发票
+            </view>
+            <view  class='Column-9'>
+                <input placeholder="请填写备注(选填)" class='enterText' type='number' bindinput='note' value='{{order.order.buyerNotes?order.order.buyerNotes:""}}' />
+            </view>
+        </view>
+       
+    </view>
+    
+    <button  class='submitbutton' bindtap=""  wx:if='{{order.order.status=="PENDING_PAYMENT"}}'>立即支付</button>
+</view>

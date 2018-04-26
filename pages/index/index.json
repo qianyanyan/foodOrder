@@ -1,0 +1,6 @@
+{
+    "navigationBarBackgroundColor":"#D03735",
+    "navigationBarTitleText":"点餐",
+    "enablePullDownRefresh":true,
+    "backgroundTextStyle":"loading"
+}

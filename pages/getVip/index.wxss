@@ -1,0 +1,80 @@
+/* pages/reservation/index.wxss */
+.chooiseContainer{
+    width: 100%;
+    height:auto;
+    margin: 0 0 20rpx 0;
+    background: #fff;
+}
+.row{
+    width:95%;
+    margin:auto;
+    border-bottom: 1px solid #eee;
+    background: url('http://zwhtubiaoku.oss-cn-beijing.aliyuncs.com/icon/arrow-right.png')no-repeat right;
+    background-size:40rpx 40rpx;
+    display: flex;
+    padding:20rpx 0 20rpx 0 ;
+}
+.Column-3{
+    flex:3;
+    font-size:13px;
+    font-weight: 600;
+}
+
+.Column-9{
+    flex:9;
+}
+.Column-9 .picker {
+    height:100%;
+}
+.Column-9 .picker .text{
+    text-align: right;
+    height:auto;
+    color:#FF9434;
+    padding-right:40rpx;
+    font-size: 12px;
+    overflow: hidden
+}
+.row-noarrow{
+    width:95%;
+    margin:auto;
+    border-bottom: 1px solid #eee;
+   
+    display: flex;
+    padding:20rpx 0 20rpx 0 ;
+}
+.Column-9 .enterText{
+    font-size: 12px;
+}
+.enterArea{
+    width: 100%;
+    height:auto;
+}
+.choice{
+    float: left;
+    overflow: hidden;
+    padding-right: 20rpx;
+}
+.choice .choiceImg{
+    width:40rpx;
+    height:40prx;
+    float: left;
+}
+.choice .choiceSex{
+    float: left;
+    padding-left: 20rpx;
+    font-size:12px;
+    color:#999;
+    line-height:40rpx;
+
+}
+.submitbutton{
+    position: fixed;
+    z-index: 99;
+    width: 95%;
+    margin: auto;
+    color:#fff;
+    bottom:20rpx;
+    background: #FF9434;
+   
+    font-size: 13px;
+}

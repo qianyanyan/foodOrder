@@ -1,0 +1,58 @@
+<!--pages/mine/index.wxml-->
+<view class='container'>
+    <view class='chooiseContainer'>
+            <view  class='row-noarrow'>
+                   <view class='Column-2'>
+                        <image src="{{userInfo.avatar}}" class='mineAvatar'/>
+                    </view>
+                    <view class='Column-10 mineName'>
+                       {{userInfo.username}}
+                    </view>
+            </view>
+       
+    </view>
+       <view class='chooiseContainer'>
+         <view class='row' bindtap="goMineOrder">
+            <view class='Column-1 order' > 
+                 我的订单
+            </view>
+           
+         </view>
+         <view class='row' bindtap="goMineCoupon">
+            <view class='Column-1 coupon'>
+               我的优惠券
+            </view>
+           
+         </view>
+         <view class='row' bindtap="goMineAddress">
+            <view class='Column-1 address'>
+               我的地址
+            </view>
+           
+         </view>
+           <view class='row'  bindtap="goMineReserVation">
+            <view class='Column-1 time'>
+               我的预约
+            </view>
+           
+         </view>
+          <view class='row' wx:if='{{userInfo.mobile}}' bindtap="goBlindPhone">
+            <view class='Column-1 order'   > 
+                绑定手机号码
+            </view>
+            
+         </view>
+            <view class='row' bindtap="goMineVip"  wx:if='{{vipState==true}}'>
+            <view class='Column-1 vip'>
+               我的会员卡
+            </view>
+          
+         </view>
+         <view class='row' bindtap="goGetVip"  wx:if='{{vipState==false}}'>
+            <view class='Column-1 vip'>
+               获取会员卡
+            </view>
+           
+         </view>
+    </view>
+</view>

@@ -1,0 +1,88 @@
+<!--pages/shopList/index.wxml-->
+<view class='cntainer'>
+     <view class='shopList'>
+        <view class='address'>
+            <view class='imgContainer'>
+                <image src="http://zwhtubiaoku.oss-cn-beijing.aliyuncs.com/icon/address.png" class='img'/>
+            </view>
+            <view class='addressContent'>
+                {{address}}
+            </view>
+        </view>
+        <scroll-view scroll-y="true"  style='height:{{scollHeight}}px;position:absolute;top:40px;' bindscroll='moreShop'>
+                   <view class='shop'  wx:for='{{shoplist}}' wx:key='index' data-id='{{item.id}}'  bindtap="showSpecificShop">
+                    <view class='shopContainer'>
+                        <view class='shopImgContainer' >
+                        <image src='{{item.headImg}}' class='shopImg' data-id='{{item.id}}'/>
+                        </view>
+                        <view class='shopMsgContainer' data-id='{{item.id}}' >
+                            <view class='shopNameContainer' data-id='{{item.id}}'>
+                                <view class='shopName'>{{item.name}}</view>
+                                
+                            </view>
+                            <view  class='shopStar' data-id='{{item.id}}'>
+                                    <view class='iconfont icon-xingxing01 star'  wx:for='{{item.stars}}' wx:key='{{index}}'></view>
+                            </view>
+                        <view style='display:flex' data-id='{{item.id}}'>
+                            <view style='flex:10' data-id='{{item.id}}'>
+                                <view class='shopTime'>营业时间:{{item.startTime}}-{{item.endTime}}</view>
+                                <view class='shopTime'>地址:{{item.province}}{{item.city}}{{item.address}}</view>
+                            </view>
+                            
+                        </view>
+                        
+                        </view>
+                        <view  style='text-align:right;flex:2' >
+                                <view class='shopDistance'>
+                                    {{item.distance}} km
+                                </view>
+                                <view class='iconfont icon-nbbPhone1 ' style='color:#FF9434;font-size:50rpx;margin-top:40rpx;' bindtap="makePhoneCall"  data-phone="{{item.tel}}">
+                        
+                                </view>
+                            </view>
+                    </view>
+                </view> 
+             </scroll-view>
+         
+                <view class='mask'  wx:if='{{maskShow==true}}' bindtap="closeMask">
+                    
+                </view>
+                <view class='shopChoice' wx:if='{{shopShow==true}}'>
+                         <view class='shop'>
+                                <view class='shopContainer'>
+                                    <view class='shopImgContainer'>
+                                    <image src='{{showShopList.headImg}}' class='shopImg'/>
+                                    </view>
+                                    <view class='shopMsgContainer' id='{{showShopList.id}}'>
+                                        <view class='shopNameContainer'>
+                                            <view class='shopName'>{{showShopList.name}}</view>
+                                            
+                                        </view>
+                                        <view  class='shopStar'>
+                                                <view class='iconfont icon-xingxing01 star'  wx:for='{{showShopList.stars}}' wx:key='{{index}}'></view>
+                                        </view>
+                                    <view style='display:flex'>
+                                        <view style='flex:10'>
+                                            <view class='shopTime'>营业时间:{{showShopList.startTime}}-{{showShopList.endTime}}</view>
+                                            <view class='shopTime'>地址:{{showShopList.province}}{{showShopList.city}}{{showShopList.address}}</view>
+                                        </view>
+                                       
+                                    </view>
+                                    
+                                    </view>
+                                     <view style='flex:2' style='text-align:right;' >
+                                      <view class='shopDistance'>
+                                               {{showShopList.distance}} km
+                                      </view>
+                                            <view class='iconfont icon-nbbPhone1 ' style='color:#FF9434;font-size:50rpx;margin-top:40rpx;' bindtap="makePhoneCall"  data-phone="{{showShopList.tel}}">
+                                    
+                                            </view>
+                                        </view>
+                                </view>
+                            </view>
+                            <button bindtap="goReservation" class='resvsertionBtn' wx:if='{{method=="reservation"}}' data-id='{{showShopList.id}}'>立即预定</button>
+                            <button bindtap="gotakeWay" class='resvsertionBtn' wx:if='{{method=="takeWay"}}' data-id='{{showShopList.id}}'>立即订餐</button>
+                            <button bindtap="goChoice" class='resvsertionBtn' wx:if='{{method=="Choice"}}' data-id='{{showShopList.id}}' data-method='{{method}}'>订餐</button>
+                </view>
+       </view>
+</view>

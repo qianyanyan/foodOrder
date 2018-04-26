@@ -1,0 +1,21 @@
+<!--pages/recharge/index.wxml-->
+<view class='container'>
+    <view class='rechargeContainer'>
+        <image src="../../assets/img/rechargeTop.png" class='img'/>
+    </view>
+    <view class='moneyContainer'>
+            <view class='moneyBox' wx:for='{{money}}' >
+                  <view class='money {{item.active==true?"active":""}}'  data-id='{{item.id}}' bindtap="selectMoney">
+                       <view wx:if='{{item.money}}' data-id='{{item.id}}' bindtap="selectMoney">
+                                ￥{{item.money}}
+                       </view>
+                       <view wx:else='{{!item.money}}' data-id='{{item.id}}' bindtap="selectMoney">
+                           <input type="number" placeholder="输入金额" maxlength='10' value='' class='input' data-id='{{item.id}}' bindfocus='selectMoney' bindinput=''/>
+                       </view>
+                   </view>
+            </view>
+          
+    </view>
+  <button  class='submitbutton' bindtap="recharge"  disabled='{{submitBtn}}'>充值</button>
+</view>
+ 

@@ -1,0 +1,119 @@
+/* pages/shopList/index.wxss */
+.shopList{
+    height: auto;
+    width: 100%;
+}
+.shop{
+    width:95%;
+    margin: auto;
+    padding:15rpx 0 15rpx 0;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+  }
+  .shop .shopContainer{
+ 
+    margin:auto;
+    display: flex;
+  }
+  .shop .shopContainer .shopImgContainer{
+    flex: 1;
+  }
+  .shop .shopContainer .shopImgContainer .shopImg{
+    width:68px;
+   height:68px;
+   object-fit: cover;
+  }
+  .shop .shopContainer .shopMsgContainer{
+    flex: 8;
+    width:60%;
+  }
+  .shopMsgContainer .shopNameContainer{
+    width: 100%;
+    display: flex;
+    height: auto;
+  }
+  .shopMsgContainer .shopNameContainer .shopName{
+    font-size: 14px;
+    line-height: 1;
+    padding-left: 20rpx;
+    
+    font-weight:600;
+   
+  }
+ .shopDistance{
+  
+      font-size: 10px;
+      color:#666;
+  }
+  .shopMsgContainer .shopStar{
+  
+    overflow: hidden;
+    padding:1px 0 1px 20rpx;
+
+  }
+  .shopMsgContainer .shopTime{
+    font-size:12px;
+    color:#999999;
+  
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    width:80%;
+    padding:2rpx 0 0 20rpx;
+   
+  }
+  .star{
+    color:#FD783A;
+    width:50rpx;
+    float:left;
+  }
+  .address{
+      height: auto;
+      width: 95%;
+      margin:auto;
+      display: flex;
+      padding:20rpx 0;
+      border-bottom: 1px solid #eee;
+  }
+  .address .imgContainer{
+      flex: 1;
+  }
+  .address .imgContainer .img{
+      width:40rpx;
+      height: 40rpx;
+  }
+  .address .addressContent{
+      flex: 11;
+      font-size: 13px;
+      color:#666;
+  }
+  .mask{
+      top:0;
+      left: 0;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+      z-index: 98;
+  }
+  .shopChoice{
+      width: 95%;
+      margin:auto;
+      position: absolute;
+      z-index: 99;
+      top:40%;
+      background: #fff;
+      left: 0;
+      right: 0;
+      border-radius: 10rpx;
+      padding:20rpx 0;
+  }
+  .shopChoice .resvsertionBtn{
+        width:95%;
+      
+        background: rgb(255, 148, 52);
+        color: #fff;
+        margin:auto;
+        font-size: 13px;
+        
+  }

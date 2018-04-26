@@ -1,0 +1,233 @@
+/**index.wxss**/
+.swiperContainer{
+  width: 100%;
+  height:auto;
+}
+.titleContainer{
+  display: flex;
+  width:100%;
+  height:auto ;
+  padding:20rpx 0 20rpx 0;
+  font-size: 13px;
+  background: #fff;
+  margin-top:20rpx;
+}
+.titleContainer .title{
+  flex: 1;
+  text-align: center
+}
+.titleContainer .titleName{
+  line-height: 64rpx;
+}
+.titleContainer .title .titleImgConatiner{
+  width:110rpx;
+  height:110rpx;
+  background: #FF8600;
+  margin:auto;
+  border-radius: 100%;
+  line-height: 110rpx;
+}
+.titleContainer .title .titleImgConatiner image{
+  width:64rpx;
+  height:64rpx;
+  vertical-align: middle;
+  margin:auto;
+}
+.tip{
+  width:300rpx;
+  height:60rpx;
+  position: absolute;
+  background: rgba(0,0,0,0.5);
+  top:60rpx;
+  left:50rpx;
+  border-radius: 40rpx;
+  color:#fff;
+  font-size: 11px;
+  line-height: 60rpx;
+}
+.tip .tipContainer{
+  display: flex;
+  width: 100%;
+}
+.tip .tipContainer .tipAddressIcon{
+  width:50rpx;
+  height:45rpx;
+  padding:5rpx 0 0 5rpx;
+  flex:1;
+
+}
+.tip .tipContainer  .tipAddress{
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  flex:4;
+}
+.tip .tipContainer .tipRightArrowIcon{
+  width:45rpx;
+  height:40rpx;
+  padding:10rpx 0 0 10rpx;
+  flex:1;
+}
+.shop{
+  width:100%;
+  margin: auto;
+  padding:25rpx 0 15rpx 0;
+  background: #fff;
+}
+.shop .shopContainer{
+  width:95%;
+  margin:auto;
+  display: flex;
+}
+.shop .shopContainer .shopImgContainer{
+  flex: 1;
+}
+.shop .shopContainer .shopImgContainer .shopImg{
+   width:68px;
+   height:68px;
+   object-fit: cover;
+ 
+}
+.shop .shopContainer .shopMsgContainer{
+  flex: 8;
+}
+.shopMsgContainer .shopName{
+  font-size: 14px;
+  line-height: 1;
+  padding-left: 20rpx;
+
+  font-weight:600;
+
+}
+.shopMsgContainer .shopStar{
+
+  overflow: hidden;
+  padding:1px 0 1px 20rpx;
+}
+.shopMsgContainer .shopTime{
+  font-size:12px;
+  color:#999999;
+
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  width:100%;
+  padding:1px 0 0 20rpx;
+}
+.star{
+  color:#FD783A;
+  width:50rpx;
+  float:left;
+}
+.homeShopImgContainer{
+  width: 100%;
+  background: #fff;
+  overflow: hidden;
+  margin-top:20rpx;
+}
+.homeShopImgContainer .homeShopImgTitleContainer{
+    text-align: center;
+    padding: 20rpx 0;
+    border-bottom: 1px solid #eee;
+    font-size: 15px;
+    font-weight: 500;
+    overflow: hidden;
+}
+.homeShopImgContainer .homeShopImgTitleContainer .homeShopTitleContainer{
+  width: 360rpx;
+  margin: auto;
+  overflow: hidden;
+}
+.homeShopImgContainer .homeShopImgTitleContainer .homeShopTitleContainer .line{
+    width: 90rpx;
+    display: block;
+    height: 2rpx;
+    background: rgb(0, 0, 0);
+    float: left;
+    margin-top: 20rpx;
+}
+.homeShopImgContainer .homeShopImgTitleContainer .homeShopTitleContainer  .homeShopTitle{
+  font-size: 15px;
+  padding: 0 15rpx;
+  display: block;
+  float: left;
+  font-weight: 600;
+}
+.homeShopImgContainer  .shopImgContainer{
+  width: 95%;
+  margin: auto;
+  overflow: hidden;
+}
+.homeShopImgContainer  .shopImgContainer .homeShopImg{
+  float: left;
+  width: 33.333%;
+  text-align: center;
+  margin-top: 30rpx;
+}
+.homeShopImgContainer  .shopImgContainer .homeShopImg .img{
+  width: 200rpx;
+  height: 200rpx;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.mask{
+  position: fixed;
+  background: rgba(0,0,0,0.5);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 98;
+}
+.mask .scanModel{
+  width: 560rpx;
+  height:500rpx;
+  margin:auto;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 99;
+  border-radius: 10rpx;
+}
+.mask .scanModel .scanContainer .scan{
+  padding:60rpx 0;
+  border-bottom:1px solid #eee;
+  
+}
+.mask .scanModel .scanContainer .scan .scanImg{
+  width:192rpx;
+  height:184rpx;
+  background:#FF4F4F;
+  margin:auto;
+  border-radius:100%;
+  line-height:184rpx;
+  text-align:center;
+  margin-bottom:54rpx;
+
+
+}
+.mask .scanModel .scanContainer .scan .img{
+  width:64rpx;
+  height:64rpx;
+  vertical-align:middle;
+  margin:auto;
+
+}
+.mask .scanModel .scanContainer .scan .text{
+  text-align:center;
+  padding:20rpx 0;
+  font-size:12px;
+  color:#999;
+
+}
+.mask .scanModel .choiceText{
+  text-align:center;
+  font-size:13px;
+  line-height:60rpx;
+  color:#FF8600
+}

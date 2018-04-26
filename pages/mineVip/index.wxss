@@ -1,0 +1,97 @@
+/* pages/mineVip/index.wxss */
+page{
+    height: 100%;
+}
+.VipContainer{
+    width: 700rpx;
+    height: auto;
+    border-radius: 15rpx;
+    background: #fff;
+    margin-top:20rpx;
+    padding:30rpx 0;
+  
+}
+.VipContainer .VipPeople{
+    width: 680rpx;
+    overflow: hidden;
+    margin: auto;
+    padding:20rpx 0;
+    border-bottom: 1px solid #eee;
+}
+.VipContainer .VipPeople .imgContainer{
+    float: left;
+    width: 110rpx;
+    height: 110rpx;
+
+}
+.VipContainer .VipPeople .imgContainer .img{
+   width: 110rpx;
+   height:110rpx;
+   border-radius: 100%;
+}
+.peopleNameContainer{
+    float: left;
+    width:400rpx;
+    height:110rpx;
+}
+.peopleNameContainer .peopleVipId{
+   line-height: 40rpx;
+   font-size: 12px;
+   color:#666;
+}
+.peopleNameContainer .peopleName{
+   line-height: 1;
+   font-size: 13px;
+   font-weight: 600;
+   height: 70rpx;
+}
+.Vip{
+    color:#3199E8;
+    line-height: 110rpx;
+    float: left;
+    font-weight: 600;
+    font-size: 13px;
+}
+.VipContainer .moneyContainer{
+    width:100%;
+    height: auto;
+}
+.VipContainer .moneyContainer .Balance{
+   line-height: 60rpx;
+   color:#666;
+   font-size: 12px;
+   width: 680rpx;
+   margin:auto;
+   padding-top:20rpx;
+
+}
+.money{
+    width: 680rpx;
+    display: flex;
+    margin:auto; 
+}
+.col-4{
+    flex: 4
+}
+.height30{
+    height: 60rpx;
+    line-height: 60rpx;
+}
+.btn{
+    line-height: 60rpx;
+    width:90%;
+    margin:auto;
+    font-size: 13px;
+    border-radius: 0px !important;
+}
+.colorGreen{
+   color: #29DD0D
+
+}
+.popularBtn{
+    background: #FF9434;
+    color:#fff;
+}
+.font14{
+    font-size: 14px;
+}

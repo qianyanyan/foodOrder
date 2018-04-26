@@ -1,0 +1,91 @@
+/* pages/addressList/index.wxss */
+page{
+    height: 100%;
+}
+.addressList{
+    width: 100%;
+    height: auto;
+}
+
+.addressList .addressBg{
+    width: 100%;
+    background: #fff;
+    margin-bottom: 20rpx;
+    padding:20rpx 0;
+
+}
+.addressList .addressBg .addressContainer{
+    width:95%;
+    margin: auto;
+    display: flex;
+    background: #fff;
+}
+.addressList .addressBg .addressContainer .address{
+    flex: 10
+}
+.addressList .addressBg .addressContainer .edit{
+    flex: 2;
+    text-align: center
+}
+.addressList .addressBg .addressContainer .edit .addressBtn{
+    font-size:12px;
+    padding:0;
+    margin:0;
+    background:#FF9434;
+    color:#fff;
+
+}
+.addressList .addressBg .addressContainer .edit .editIcon{
+    width:60rpx;
+    height: 60rpx;
+    margin-top:10rpx;
+
+}
+.addressList .addressBg .addressContainer .address .addressMessage{
+    overflow: hidden;
+    display: flex
+}
+.addressList .addressBg .addressContainer .address .addressMessage .addressName{
+    font-size: 14px;
+    font-weight: 600;
+    flex: 3
+}
+.addressList .addressBg .addressContainer .address .addressMessage .addressPhone{
+    font-size: 14px;
+    
+    flex: 9
+}
+.addressList .addressBg .addressContainer .address  .addressarea{
+    font-size: 13px;
+    color:#666;
+}
+.addBtnConatiner{
+    width: 100%;
+    height: 80rpx;
+    position: fixed;
+    bottom:0;
+    z-index: 99;
+    overflow: hidden;
+    margin: auto;
+    background: #fff;
+    border-top:1px soldi #eee
+}
+.addBtnConatiner .addBtn{
+    width: 95%;
+    margin: auto;
+    overflow: hidden;
+    margin-top: 15rpx
+}
+.addBtnConatiner .addBtn .img{
+    width: 50rpx;
+    height: 50rpx;
+    float: left;
+}
+.addBtnConatiner .addBtn .text{
+    float: left;
+    font-size: 12px;
+    color: #999;
+    line-height: 50rpx;
+    margin-left:10rpx;
+
+}
